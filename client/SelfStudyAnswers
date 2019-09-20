@@ -1,0 +1,17 @@
+ *Explain what a token is used for.
+    A token is a piece of data that has no meaning or use on its own, 
+    but combined with the correct tokenization system, becomes a vital player in securing your application. 
+    Token based authentication works by ensuring that each request to a server is accompanied by a signed 
+    token which the server verifies for authenticity and only then responds to the request.
+
+*What steps can you take in your web apps to keep your data secure?
+
+
+*Describe how web servers work.
+    The “world wide web” (which we’ll refer to as “the web”) is just a part of the internet - which is itself a network of interconnected computers. 
+    The web is just one way to share data over the internet. 
+    It consists of a body of information stored on web servers, ready to be shared across the world.
+
+*Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+    PUT is the “U” in CRUD and it stands for UPDATE We use the PUT method to change a resource’s information. 
+    PUT takes in a body object like POST and we use that object to identify data that needs to be updated somewhere.

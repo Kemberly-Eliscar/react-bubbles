@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Pack } from "@potion/layout";
 import { Svg, Circle } from "@potion/element";
+import { connect } from 'react-redux'
 
-const Bubbles = ({ colors }) => {
+
+const Bubbles = props => {
   const [bubbleData, setBubbleData] = useState([]);
   useEffect(() => {
-    const generateBubbleData = colors.map((_, i) => ({
-      value: Math.floor(Math.random() * (colors.length * 2)) + 1,
+    const generateBubbleData = props.colors.map((_, i) => ({
+      value: Math.floor(Math.random() * (props.colors.length * 2)) + 1,
       key: `${i + 1}`
     }));
     setBubbleData(generateBubbleData);
-  }, [colors]);
+  }, [props.colors]);
 
   return (
     <div className="bubble-wrap">
@@ -50,4 +52,11 @@ const Bubbles = ({ colors }) => {
   );
 };
 
-export default Bubbles;
+
+const mapStateToProps = state => {
+  return{
+    colors: state.colors
+  }
+}
+
+export default connect(mapStateToProps, {})(Bubbles);

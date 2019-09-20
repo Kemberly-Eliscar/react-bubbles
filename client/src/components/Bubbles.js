@@ -31,14 +31,14 @@ const Bubbles = props => {
           {nodes =>
             nodes
               .map(({ x, y, r, key }, i) => {
-                if (i < colors.length) {
+                if (i < props.colors.length) {
                   return (
                     <Circle
                       key={key}
                       cx={x}
                       cy={y}
                       r={r}
-                      fill={colors[i].code.hex}
+                      fill={props.colors[i].code.hex}
                     />
                   );
                 }
@@ -54,9 +54,9 @@ const Bubbles = props => {
 
 
 const mapStateToProps = state => {
-  return{
-    colors: state.colors
+  return {
+      colors: state.colors
   }
 }
 
-export default connect(mapStateToProps, {})(Bubbles);
+export default connect(mapStateToProps, {})(Bubbles)
